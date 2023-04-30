@@ -4,12 +4,14 @@ public class ManagerFilms {
     private String[] films = new String[0];
     private int limit;
 
-    public ManagerFilms(){
-        this.limit= 10;
+    public ManagerFilms() {
+        this.limit = 10;
     }
-    public ManagerFilms(int limit){
+
+    public ManagerFilms(int limit) {
         this.limit = limit;
     }
+
     public void addFilm(String film) {
         String[] tmp = new String[films.length + 1];
         for (int i = 0; i < films.length; i++) {
@@ -24,11 +26,11 @@ public class ManagerFilms {
         return films;
     }
 
-    public String[]  lostFilm() {
+    public String[] lostFilm() {
         int resultLength;
-        if(films.length<limit){
+        if (films.length < limit) {
             resultLength = films.length;
-        }else{
+        } else {
             resultLength = limit;
         }
 
